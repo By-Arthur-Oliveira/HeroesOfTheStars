@@ -9,12 +9,12 @@ void drawMainMenu()
     Sound selectSoundEffect = LoadSound("resources/MenuAssets/startgamesound.mp3");
     Texture2D selectorTexture = LoadTexture("resources/MenuAssets/selector.png");
 
-    if (IsKeyPressed(KEY_DOWN) && selectorPositionY >= 380 && selectorPositionY < 530)
+    if ((IsKeyPressed(KEY_DOWN) || IsKeyPressed(KEY_S)) && selectorPositionY >= 380 && selectorPositionY < 530)
     {
         selectorPositionY += 50;
     }
 
-    if (IsKeyPressed(KEY_UP) && selectorPositionY > 380 && selectorPositionY <= 530)
+    if ((IsKeyPressed(KEY_UP) || IsKeyPressed(KEY_W)) && selectorPositionY > 380 && selectorPositionY <= 530)
     {
         selectorPositionY -= 50;
     }
