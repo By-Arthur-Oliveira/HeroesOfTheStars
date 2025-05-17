@@ -68,7 +68,6 @@ void drawNewGame()
         optionController = 0;
     }
 
-    DrawText("HEROES OF THE STARS", GetScreenWidth() / 2 - 479, 30, 75, WHITE);
     DrawText("NEW GAME", GetScreenWidth() / 2 - 120, 350, 45, WHITE);
     ClearBackground(BLACK);
 }
@@ -80,7 +79,6 @@ void drawLeaderboard()
         optionController = 0;
     }
 
-    DrawText("HEROES OF THE STARS", GetScreenWidth() / 2 - 479, 30, 75, WHITE);
     DrawText("LEADERBOARD", GetScreenWidth() / 2 - 170, 350, 45, WHITE);
     ClearBackground(BLACK);
 }
@@ -92,7 +90,6 @@ void drawKeyboardLayout()
         optionController = 0;
     }
 
-    DrawText("HEROES OF THE STARS", GetScreenWidth() / 2 - 479, 30, 75, WHITE);
     DrawText("KEYBOARD LAYOYT", GetScreenWidth() / 2 - 215, 350, 45, WHITE);
     ClearBackground(BLACK);
 }
