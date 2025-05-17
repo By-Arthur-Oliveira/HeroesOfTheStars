@@ -141,7 +141,7 @@ void drawCredits()
         optionController = 0;
     }
     DrawText("CREDITS", GetScreenWidth() / 2 - 145, 45, 65, WHITE);
-    DrawText("This game was developed by Computer Science students from the\nUniversidade do Estado do Rio Grande do Norte (UERN)\n\n Arthur Oliveira: [https://github.com/By-Arthur-Oliveira]\n\n Pedro Ricardo: [https://github.com]\n\n Francisco Genyson: [https://github.com/Extremois]\n\n\nWe hope you have fun and make the most of the experience!", 50, GetScreenHeight() / 2 - 200, 40, GOLD);
+    DrawText("This game was developed by Computer Science students from the\nUniversidade do Estado do Rio Grande do Norte (UERN)\n\n Arthur Oliveira: [https://github.com/By-Arthur-Oliveira]\n\n Pedro Ricardo: [https://github.com/pedroricardo14]\n\n Francisco Genyson: [https://github.com/Extremois]\n\n\nWe hope you have fun and make the most of the experience!", 50, GetScreenHeight() / 2 - 200, 40, GOLD);
     ClearBackground(BLACK);
 }
 
