@@ -40,7 +40,11 @@ int main()
             drawKeyboardLayout();
             break;
         case 4:
+            drawCredits();
+            break;
+        case 5:
             drawGame();
+            break;
         }
 
         DrawFPS(25, 25);

@@ -9,12 +9,12 @@ void drawMainMenu()
     Sound selectSoundEffect = LoadSound("resources/MenuAssets/startgamesound.mp3");
     Texture2D selectorTexture = LoadTexture("resources/MenuAssets/selector.png");
 
-    if ((IsKeyPressed(KEY_DOWN) || IsKeyPressed(KEY_S)) && selectorPositionY >= 380 && selectorPositionY < 530)
+    if ((IsKeyPressed(KEY_DOWN) || IsKeyPressed(KEY_S)) && selectorPositionY >= 380 && selectorPositionY < 580)
     {
         selectorPositionY += 50;
     }
 
-    if ((IsKeyPressed(KEY_UP) || IsKeyPressed(KEY_W)) && selectorPositionY > 380 && selectorPositionY <= 530)
+    if ((IsKeyPressed(KEY_UP) || IsKeyPressed(KEY_W)) && selectorPositionY > 380 && selectorPositionY <= 580)
     {
         selectorPositionY -= 50;
     }
@@ -47,7 +47,13 @@ void drawMainMenu()
     {
         UnloadTexture(selectorTexture);
         PlaySound(selectSoundEffect);
-        optionController = 0;
+        optionController = 4;
+        selectorPositionY = 530;
+    }
+
+    if(IsKeyPressed(KEY_ENTER) && (selectorPositionY == 580)){
+        UnloadTexture(selectorTexture);
+        PlaySound(selectSoundEffect);
         CloseWindow();
     }
 
@@ -56,7 +62,8 @@ void drawMainMenu()
     DrawText("NEW GAME", 140, 375, 35, WHITE);
     DrawText("LEADERBOARD", 140, 425, 35, WHITE);
     DrawText("KEYBOARD LAYOUT", 140, 475, 35, WHITE);
-    DrawText("EXIT GAME", 140, 525, 35, WHITE);
+    DrawText("CREDITS", 140, 525, 35, WHITE);
+    DrawText("EXIT GAME", 140, 575, 35, WHITE);
     ClearBackground(BLACK);
 }
 
@@ -91,5 +98,17 @@ void drawKeyboardLayout()
     }
 
     DrawText("KEYBOARD LAYOYT", GetScreenWidth() / 2 - 215, 350, 45, WHITE);
+    ClearBackground(BLACK);
+}
+
+void drawCredits()
+{
+    if (IsKeyPressed(KEY_ESCAPE))
+
+    {
+        optionController = 0;
+    }
+
+    DrawText("CREDITS", GetScreenWidth() / 2 - 120, 350, 45, WHITE);
     ClearBackground(BLACK);
 }
